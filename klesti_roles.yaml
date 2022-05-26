@@ -1,0 +1,21 @@
+apiVersion: rbac.authorizatinon.k8s.io/v1
+kind: Role 
+metadata:
+  name: Klesti-role 
+rules:
+  apiGroups:
+    v1
+  resources:
+    pods
+  verbs:
+    get
+    list 
+    watch 
+    delete
+  apiGroups:
+    apps/v1
+  resources:
+      Services
+  verbs:
+      delete
+      edit
